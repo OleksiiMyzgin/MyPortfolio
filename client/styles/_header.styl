@@ -1,0 +1,184 @@
+.header
+  position: absolute
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 99
+  border-bottom: 3px solid yellow
+  transition: all .3s
+  // icon menu
+  &__icon
+    display: none
+    top: 0
+    width: 50px
+    position: absolute
+    height: 35px
+    right: 10px
+    cursor: pointer
+    transition: all 1.5s
+    @media (max-width: 575px)
+      display: block
+    .menu-line
+      display: block
+      width: 50px
+      height: 5px
+      margin-bottom: 10px
+      padding: 0
+      background-color: yellow
+  &__menu
+    display: flex
+    justify-content: space-evenly
+    flex-direction: row
+  .menu__list
+    padding: 0
+    .menu__item
+      display: inline-block
+      position: relative
+      padding: 10px 20px
+      &:first-child
+        padding-left: 15px
+      &:hover .menu__link
+        color: yellow
+      &:hover .menu__link:before
+        height: 100%
+        background-color: yellow
+      &:hover .menu__link:after
+        height: 100%
+        background-color: yellow
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        width: 0%
+        top: 0px
+        left: 10%
+        height: 2px
+        background-color: #fff
+        transition: 0.3s
+      &:hover:before
+        width: 80%
+        background-color: yellow
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0px
+        width: 0%
+        right: 10%
+        height: 2px
+        background-color: #fff
+        transition: 0.3s
+      &:hover:after
+        width: 80%
+        background-color: yellow
+      .menu__link
+        color: #fff
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          bottom: 0
+          width: 2px
+          left: 10%
+          height: 0%
+          background-color: #fff
+          transition: 0.3s
+          transition-delay: 0.2s
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          top: 0
+          width: 2px
+          right: 10%
+          height: 0%
+          background-color: #fff
+          transition: 0.3s
+          transition-delay: 0.2s
+      .menu__link.active
+        color: yellow
+  .menu__list__lang
+    margin-left: 50px
+    transition: all 0.3s
+    .menu__item:hover .menu__link
+      background: rgba(225,225,225,.5)
+      color: yellow
+    .menu__link
+      color: #fff
+      font-weight: 500
+      border-radius: 50px
+      padding: 10px 15px
+      &.active
+        color: yellow
+        font-weight: 700
+  .menu__link
+    font-weight: 600
+    transition: .3s
+    transition-delay: .2s
+
+
+@media (min-width: 576px) and (max-width: 740px)
+  .header__menu
+    width: 100%
+    flex-direction: column
+    align-items: flex-start
+    padding: 10px
+    .menu
+      line-height: 20px
+      margin-left: 40px
+    .menu__list__lang
+      padding: 0
+
+// @media (min-width: 576px)
+//   .menu__list
+//       display: inline-block
+
+.fixed-menu-style
+  position: fixed
+  top: -100%
+
+.fixed-menu
+  position: fixed
+  top: 0
+  height: auto
+  background: darkgrey
+
+@media (max-width: 575px)
+  .header
+    position: fixed
+    top: 0
+    border-bottom: 0
+    &__menu
+      // display: none
+      padding: 0
+      width: 100%
+      // flex-direction: column-reverse
+    .header__icon
+      display: block
+    .menu__list
+      display: none
+      margin: 0
+      width: 100%
+      padding-top: 70px
+      .menu__item
+        display: block
+        &:hover:before
+          width: 0%
+        &:hover:after
+          width: 0%
+        &:hover .menu__link
+          color:  $yellow
+        &:hover .menu__link:before
+          height: 0%
+        &:hover .menu__link:after
+          height: 0%
+    .menu__list__lang
+      margin: 20px 0
+      padding: 0
+      position: absolute
+      padding: 0
+      margin: 0
+      top: 30px
+      .menu__link
+        background: rgba(225,225,225,.5)
+        margin: 0 10px

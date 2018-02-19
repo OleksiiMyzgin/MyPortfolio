@@ -1,0 +1,34 @@
+.main
+  width: 100%
+  height: 100vh
+  min-height: 600px
+  // background-color lightgrey
+  background-image url('../img/hero-bg-2-s.jpg')
+  background-position: center
+  background-size: cover
+  position: relative
+  &__text
+    font-size: 42px
+    line-height: 48px
+    margin-bottom: 60px
+    &_highlight
+      color: headerColor
+  &__button
+    font-weight: 700
+    transition: all .3s
+    color: headerColor
+    border-color: headerColor
+    &:hover
+      padding: 20px 40px
+      background: yellow
+      color: darkblue
+    &:hover svg
+      transform: rotate(90deg)
+      .svg__item
+        fill: darkblue
+    .right-arrow
+      width: 10px
+      height: auto
+    svg
+      margin-left: 15px
+      transition: all .5s
