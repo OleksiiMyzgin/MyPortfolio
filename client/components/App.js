@@ -40,33 +40,34 @@ class App extends React.Component {
 
   _switchLanguage(e){
     const lang = e.target.dataset.lang
+
     if(lang === 'ENG') {
       this.setState({
         data: dataEng
       });
-    } else if (lang === "RU") {
+    }
+
+    if (lang === "RU") {
       this.setState({
         data: dataRu
       });
-    } else {
-      this.setState({
-        data: dataEng
-      });
     }
+
   }
 
 
   render(){
+    const { data } = this.state;
     return(
       <div className="container-fluid">
         <MainSection
-          data={this.state.data}
+          data={data.header}
           switchLanguage={this._switchLanguage}
         />
-        <AboutSection data={this.state.data}/>
-        <Portfolio data={this.state.data}/>
-        <Contact data={this.state.data}/>
-        <Footer data={this.state.data}/>
+        <AboutSection data={data.about}/>
+        <Portfolio data={data.portfolio}/>
+        <Contact data={data.contact}/>
+        <Footer data={data.footer}/>
       </div>
     )
   }

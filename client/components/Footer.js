@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Footer = props => {
 
-  const footer = props.data.footer;
+  const footer = props.data;
 
   return (
     <section id="footer" className="footer flex big_padding">

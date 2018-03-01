@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Contact = props => {
 
-  const contact = props.data.contact;
+  const contact = props.data;
 
   return (
     <section id="contact" to="contact" className="contact flex big_padding" id="contact">

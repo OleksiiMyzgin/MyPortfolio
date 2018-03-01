@@ -13,11 +13,11 @@ class Header extends React.Component {
     this.setState({ selected: item });
   }
   _isActive(value) {
-    return " " + (value === this.state.selected ? "menu__link active" : "menu__link");
+    return (value === this.state.selected ? "menu__link active" : "menu__link");
   }
 
   render() {
-    const menu = this.props.data.header.menu;
+    const menu = this.props.data.menu;
 
     return (
       <header className="header flex">

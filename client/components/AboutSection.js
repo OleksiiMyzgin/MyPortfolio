@@ -9,7 +9,7 @@ import rocket from '../img/SVG/rocket.svg';
 
 const AboutSection = props => {
 
-  const about = props.data.about;
+  const about = props.data;
 
   return (
     <section to="about" id="about" className="big_padding">

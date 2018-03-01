@@ -3,7 +3,7 @@ import Header from "./Header";
 import PropTypes from 'prop-types';
 
 const MainSection = props => {
-  const main = props.data.header.main;
+  const main = props.data.main;
 
   return (
     <section className="main flex" id="home">

@@ -7,7 +7,7 @@ import creative from '../img/creative.jpg';
 
 const Portfolio = props => {
 
-  const portfolio = props.data.portfolio;
+  const portfolio = props.data;
 
   return (
     <section id="portfolio" to="portfolio" id="portfolio" className="flex big_padding">
