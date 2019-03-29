@@ -52,9 +52,9 @@ const AboutSection = props => {
             <p className="skills__text">
               {about.skills.about}
               <br/>
-              <span className="skills__page-link hightight">
+              <a className="skills__page-link hightight page-scroll" dest="contact">
                 {about.skills.link}
-              </span>
+              </a>
             </p>
           </div>
           <div className="skills-bars flex animate" data-animation="animated">

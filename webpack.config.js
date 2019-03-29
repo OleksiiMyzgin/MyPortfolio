@@ -31,9 +31,6 @@ const common = merge([
           chunks: ['index', 'common'],
           template: './index.html'
       }),
-      new webpack.optimize.CommonsChunkPlugin({
-          name: 'common'
-      }),
       new webpack.ProvidePlugin({
           $: 'jquery',
           jQuery: 'jquery'
